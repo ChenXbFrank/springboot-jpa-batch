@@ -66,7 +66,8 @@ public class UserController {
     @GetMapping("/saveBatch")
     public void saveBatch(){
         List<User> list = new ArrayList<>();
-        for (int i = 0; i < 1000; i++) {
+        // 耗时1792ms 速度很快了
+        for (int i = 0; i < 5000; i++) {
             User user = new User();
             user.setUserName("frank" + i);
             user.setEmail(i + "qq.com");
